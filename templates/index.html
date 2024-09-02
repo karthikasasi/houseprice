@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            background-image: url("static/images/real.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: rgb(59, 21, 3);
+            text-align: center;
+            padding-top: 50px;
+        }
+        .form-container {
+            background-color: rgba(201, 199, 199, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input, select {
+            margin: 10px;
+            padding: 5px;
+            width: 80%;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: #2555da;
+            color: rgb(212, 233, 27);
+            cursor: pointer;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>House Price Prediction USA</h1>
+        <form action="/predict" method="post">
+            <input type="number" name="MSSubClass" placeholder="Municipal Standard Class" required><br>
+             <select name="MSZoning" required>
+                <option value="" disabled selected>Select Zone of sale</option>
+                <option value="RL">Recidential low density</option>
+                <option value="RM">Recidencial Mediam density</option>
+                <option value="FV">Floating Village</option>
+                <option value="RH">Recidential High density</option>
+                <option value="C (all)">Commercial</option>
+            </select><br>
+            <input type="number" name="LotArea" placeholder="LotArea" required><br>
+            <select name="LotConfig" required>
+                <option value="" disabled selected>Select Lot Configuration</option>
+                <option value="Inside">Inside</option>
+                <option value="Corner">Corner</option>
+                <option value="CulDSac">CulDSac</option>
+                <option value="FR2">FR2</option>
+                <option value="FR3">FR3</option>
+            </select><br>
+            <select name="BldgType" required>
+                <option value="" disabled selected>Select Building Type</option>
+                <option value="1Fam">1Fam</option>
+                <option value="2fmCon">2fmCon</option>
+                <option value="Duplex">Duplex</option>
+                <option value="TwnhsE">TwnhsE</option>
+                <option value="Twnhs">Twnhs</option>
+            </select><br>
+            <input type="number" name="OverallCond" placeholder="OverallCondition" required><br>
+            <input type="number" name="YearBuilt" placeholder="YearBuilt" required><br>
+            <input type="number" name="YearRemodAdd" placeholder="Year of Remodeling" required><br>
+            <select name="Exterior1st" required>
+                <option value="" disabled selected>Select Exterior metirials</option>
+                <option value="AsphShn">AsphShn</option>
+                <option value="AsbShng">AsbShng</option>
+                <option value="BrkComm">BrkComm</option>
+                <option value="BrkFace ">BrkFace</option>
+                <option value="CBlock">CBlock</option>
+                <option value="CemntBd">CemntBd</option>
+                <option value="HdBoard">HdBoard</option>
+                <option value="ImStucc">ImStucc</option>
+                <option value="MetalSd">MetalSd</option>
+                <option value="Plywood">Plywood</option>
+                <option value="Stone">Stone</option>
+                <option value="Stucco">Stucco</option>
+                <option value="VinylSd">VinylSd</option>
+                <option value="Wd Sdng">Wd Sdng</option>
+                <option value="WdShing">WdShing</option>
+                 </section><br>
+            <input type="number" name="BsmtFinSF2" placeholder="Basement area square footage" required><br>
+            <input type="number" name="TotalBsmtSF" placeholder="Total Basement area" required><br>
+           
+
+                 <button type="submit">Predict SalePrice</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    

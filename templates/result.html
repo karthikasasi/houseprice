@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url("static/images/home.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: rgb(27, 157, 161);
+            text-align: center;
+            padding-top: 100px;
+        }
+        .result-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .result-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .result-container p {
+            font-size: 20px;
+        }
+        a {
+            color: #f7280c;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Result</h2>
+        <p>The predicted SalePrice is: <strong>${{ prediction }}</strong></p>
+        <a href="/">Go back to the form</a>
+    </div>
+</body>
+</html>
